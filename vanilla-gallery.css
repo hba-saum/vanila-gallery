@@ -1,0 +1,131 @@
+.vanila-gallery {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+.gallery-card {
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: all 0.2s;
+}
+
+.gallery-card img {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+  aspect-ratio: 1/1;
+}
+
+.gallery-card:hover {
+  transform: scale(.99);
+}
+
+.gallery-card p {
+  font-size: 20px;
+  margin-top: 10px;
+  margin-bottom: 0;
+}
+
+.gallery-card .download-btn {
+  background-image: url(Frame.png);
+  background-repeat: no-repeat;
+  background-position: center; 
+  cursor: pointer;
+  height: 40px;
+  width: 40px;
+  padding: 12px;
+  border: none;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.6);
+  position: absolute;
+  top: 10px;
+  right: 10px;
+}
+
+.gallery-card .download-btn:hover {
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+/* Modal */
+
+.gallery-modal {
+  background: rgba(0, 0, 0, 0.658);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  visibility: hidden;
+} 
+
+.gallery-modal .modal-btns{
+  display: flex;
+  justify-content: space-between;
+  padding-left: 40px;
+  padding-right: 40px;
+  align-items: center;
+  height: 100vh;
+}
+
+.gallery-modal .modal-btns button{
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #FFF;
+  color: #FFF;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+} 
+
+.gallery-modal .modal-btns button:hover{
+  background-color: rgba(0, 0, 0, 0.6);
+}
+
+.gallery-modal img {
+  max-width: 80%;
+  max-height: 80%;
+  object-fit: contain;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  z-index: -1;
+} 
+
+
+
+/* 
+#gallery-modal {
+  background: rgba(0, 0, 0, 0.658);
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 100%;
+  z-index: 9999;
+  visibility: visible;
+} 
+
+#gallery-modal #modal{
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+
+
+
+#gallery-modal #modal button{
+  background-color: rgba(0, 0, 0, 0);
+  border: 1px solid #FFF;
+  color: #FFF;
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+} 
+
+#gallery-modal #modal button:hover{
+  background-color: rgba(0, 0, 0, 0.6);
+} */
