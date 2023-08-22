@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vanilla gallery</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-9ndCyUaIbzAi2FUVXJi0CjmCapSmO7SnpJef0486qhLnuZ2cdeRhO02iuK6FUUVM" crossorigin="anonymous">
     <link rel="stylesheet" href="vanilla-gallery.css">
   </head>
   <body>
@@ -12,7 +11,6 @@
       <div class="vanila-gallery">
         <div class="gallery-card">
           <img src="img/1.jpg">
-          <p>title 1</p>
           <a class="download-btn" href="img/1.jpg"></a>
         </div>
         <div class="gallery-card">
@@ -53,18 +51,20 @@
         <button id="prev-btn">&lt;</button>
         <button id="next-btn">&gt;</button>
       </div>
-      <img>
+      <div class="modal-section">
+        <div class="img-part">
+          <img>
+        </div>
+        <div class="title-part">
+          <p></p>
+          <div class="title-btns">
+            <button class="modal-download-btn"><span><img src="ico/download.png"></span> Download</button>
+            <button class="cross-btn" onclick="hideModal()"> </button>
+          </div>
+        </div>
+      </div>
     </div>
     
-    
-    <!-- <div id="gallery-modal">
-      <div id="modal">
-        <button id="prev-btn">&lt;</button>
-        <img src="img/5.jpg">
-        <button id="next-btn">&gt;</button>
-      </div>
-    </div> -->
-
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="vanilla-gallery.js"></script>
   </body>
