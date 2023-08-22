@@ -19,7 +19,7 @@
 }
 
 .gallery-card:hover {
-  transform: scale(.99);
+  transform: scale(1.01);
 }
 
 .gallery-card p {
@@ -70,20 +70,23 @@
   max-height: 80vh;
   object-fit: contain;
 }
+
 .gallery-modal .modal-section .title-part {
-  padding: 0px 12px;
-  padding-top: 20px;
+  padding: 20px 12px 0px 12px;
+}
+.title-part .title-section {
+  display: flex;
+  justify-content: space-between;
+  align-items:center;
 }
 .gallery-modal .modal-section .title-part p {
   display: inline;
   color: #FFF;
   font-size: 20px;
   font-weight: 400;
-  line-height: 28px;
-}
+  }
 .title-btns {
-  float: right;
-  display: inline;
+  display: inline-block;
 }
 .modal-download-btn {
   background-color: rgba(255, 255, 255, 0);
@@ -95,10 +98,11 @@
   border: 1px solid #FFF;
   margin-left: 10px;
   display: inline-block;
+  cursor: pointer;
 }
+
 .cross-btn {
   background-color: rgba(255, 255, 255, 0);
-  background-image: url(ico/cross.png);
   background-repeat: no-repeat;
   background-position: center; 
   border: 1px solid #FFF;
@@ -107,7 +111,11 @@
   height: 40px;
   width: 40px;
   margin-left: 10px;
-  padding: 8px 12px;
+}
+.cross-btn img{
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
 }
 .title-btns button:hover {
   background-color: rgba(255, 255, 255, 0.205);

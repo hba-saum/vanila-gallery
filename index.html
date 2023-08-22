@@ -4,6 +4,7 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Vanilla gallery</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-4bw+/aepP/YC94hEpVNVgiZdgIC5+VKNBQNGCHeKRQN+PtmoHDEXuppvnDJzQIu9" crossorigin="anonymous">
     <link rel="stylesheet" href="vanilla-gallery.css">
   </head>
   <body>
@@ -12,26 +13,27 @@
         <div class="gallery-card">
           <img src="img/1.jpg">
           <a class="download-btn" href="img/1.jpg"></a>
+          <p>NID Card</p>
         </div>
         <div class="gallery-card">
           <img src="img/2.jpg">
           <p>title 2</p>
-          <a class="download-btn" href="img/1.jpg"></a>
+          <a class="download-btn" href="img/2.jpg"></a>
         </div>
         <div class="gallery-card">
           <img src="img/3.jpg">
           <p>title 3</p>
-          <a class="download-btn" href="img/1.jpg"></a>
+          <a class="download-btn" href="img/3.jpg"></a>
         </div>
         <div class="gallery-card">
           <img src="img/4.jpg">
           <p>title 4</p>
-          <a class="download-btn" href="img/1.jpg"></a>
+          <a class="download-btn" href="img/4.jpg"></a>
         </div>
         <div class="gallery-card">
           <img src="img/5.jpg">
           <p>title 5</p>
-          <a class="download-btn" href="img/1.jpg"></a>
+          <a class="download-btn" href="img/5.jpg"></a>
         </div>
         <div class="gallery-card">
           <img src="img/6.jpg">
@@ -46,25 +48,6 @@
       </div>
     </div>
 
-    <div class="gallery-modal">
-      <div class="modal-btns">
-        <button id="prev-btn">&lt;</button>
-        <button id="next-btn">&gt;</button>
-      </div>
-      <div class="modal-section">
-        <div class="img-part">
-          <img>
-        </div>
-        <div class="title-part">
-          <p></p>
-          <div class="title-btns">
-            <button class="modal-download-btn"><span><img src="ico/download.png"></span> Download</button>
-            <button class="cross-btn" onclick="hideModal()"> </button>
-          </div>
-        </div>
-      </div>
-    </div>
-    
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js" integrity="sha384-geWF76RCwLtnZ8qwWowPQNguL3RmwHVBC9FhGdlKrxdiJJigb/j/68SIy3Te4Bkz" crossorigin="anonymous"></script>
     <script src="vanilla-gallery.js"></script>
   </body>
