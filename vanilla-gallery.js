@@ -17,9 +17,22 @@ const modalHTML = `
       </div>
       <div class="title-btns">
         <a class="modal-download-link" href="" download="">
-          <button class="modal-download-btn"><span><img src="ico/download.png"></span> <span>Download</span></button>
+          <button class="modal-download-btn">
+          <div class="modal-btn-contents">
+            <span class="modal-download-ico">
+            <svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <g id="Frame">
+            <path id="Vector" d="M2 9.33325V13.3333C2 14.0697 2.59695 14.6666 3.33333 14.6666H12.6667C13.4031 14.6666 14 14.0697 14 13.3333V9.33325" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            <path id="Vector_2" d="M8.00033 2V11.3333M8.00033 11.3333L4.66699 7.70367M8.00033 11.3333L11.3337 7.70373" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+            </g>
+            </svg></span> <span class="modal-download-text">Download</span>
+          </div>
+          </button>
         </a>
-        <button class="cross-btn" onclick="hideModal()"><img src="ico/cross.png"></button>
+        <button class="cross-btn" onclick="hideModal()"><svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+        <path d="M3.33301 3.3335L12.6663 12.6668M3.33301 12.6668L12.6663 3.3335" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+        </button>
       </div>
     </div>
   </div>
@@ -33,6 +46,20 @@ const galleryModal = document.querySelector('.gallery-modal');
 const downloadBtn = document.querySelectorAll('.download-btn');
 let currCardIndex = 0
 const totalCards = galleryCardsInfo().length;
+
+// adding download button
+const downloadSvg = `
+<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
+<g id="Frame">
+<path id="Vector" d="M2 9.33325V13.3333C2 14.0697 2.59695 14.6666 3.33333 14.6666H12.6667C13.4031 14.6666 14 14.0697 14 13.3333V9.33325" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+<path id="Vector_2" d="M8.00033 2V11.3333M8.00033 11.3333L4.66699 7.70367M8.00033 11.3333L11.3337 7.70373" stroke="white" stroke-linecap="round" stroke-linejoin="round"/>
+</g>
+</svg>
+`;
+downloadBtn.forEach((btn) => {
+  btn.innerHTML = downloadSvg;
+});
+
 // getting all galleryCards
 function galleryCardsInfo(){
   const galleryCards = document.querySelectorAll('.vanila-gallery .gallery-card');
