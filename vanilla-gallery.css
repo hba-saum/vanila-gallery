@@ -1,7 +1,8 @@
-.vanila-gallery {
+.vanilla-gallery {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
   gap: 20px;
+  /* max-width: calc(280px * 3 + 20px * 3); */
 }
 
 .gallery-card {

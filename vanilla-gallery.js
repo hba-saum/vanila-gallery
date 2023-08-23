@@ -1,5 +1,5 @@
-// DOM elements
-const vanillaGallery = document.querySelector('.vanila-gallery');
+// modal elements
+const vanillaGallery = document.querySelector('.vanilla-gallery');
 const modalHTML = `
 <div class="gallery-modal">
 <div class="modal-btns">
@@ -41,7 +41,17 @@ const modalHTML = `
 `;
 vanillaGallery.innerHTML += modalHTML;
 
-const allGalleryCards = document.querySelectorAll('.vanila-gallery .gallery-card');
+
+
+const allGalleryCards = document.querySelectorAll('.vanilla-gallery .gallery-card');
+
+// set proper width
+vanillaGallery.style.maxWidth = `calc(280px * ${allGalleryCards.length} + 20px * ${allGalleryCards.length - 1})`;
+// gallery alignment
+if(allGalleryCards.length >= 4){
+  vanillaGallery.style.margin = "0px auto";
+}
+
 const galleryModal = document.querySelector('.gallery-modal');
 const downloadBtn = document.querySelectorAll('.download-btn');
 let currCardIndex = 0
@@ -62,7 +72,7 @@ downloadBtn.forEach((btn) => {
 
 // getting all galleryCards
 function galleryCardsInfo(){
-  const galleryCards = document.querySelectorAll('.vanila-gallery .gallery-card');
+  const galleryCards = document.querySelectorAll('.vanilla-gallery .gallery-card');
   const cardsInfo = Array.from(galleryCards).map(galleryCardInfo);
   return cardsInfo;
 }
